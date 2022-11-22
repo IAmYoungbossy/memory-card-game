@@ -1,0 +1,11 @@
+header {
+  padding: 0 20px;
+  border-bottom: 2px solid;
+  background-color: #282c34;
+  border-top: 1px solid #3e4451;
+}
+
+h1 {
+  color: white;
+  font-size: min(2rem, 13.5vw);
+}
