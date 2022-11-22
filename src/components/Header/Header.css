@@ -1,11 +1,42 @@
 header {
-  padding: 0 20px;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
   border-bottom: 2px solid;
   background-color: #282c34;
+  justify-content: space-around;
   border-top: 1px solid #3e4451;
+}
+
+header > p {
+  color: white;
+  margin-left: 5px;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 h1 {
   color: white;
   font-size: min(2rem, 13.5vw);
+}
+
+.current-score,
+.highest-score {
+  font-size: min(1.2rem, 8vw);
+  font-weight: 900;
+}
+
+.current-score {
+  color: #bcff98;
+}
+
+.highest-score {
+  color: #f89898;
+}
+
+@media screen and (max-width: 410px) {
+  header {
+    justify-content: center;
+  }
 }
