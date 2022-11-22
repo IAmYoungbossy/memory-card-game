@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  width: min-content;
+  margin: 20px auto;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 5px solid #2b3829;
+  background-color: #40513e;
+}
+
+.name-holder {
+  margin-top: auto;
+  text-align: center;
+  padding: 5px;
+  color: #b3bcff;
+  border-top: 4px solid #2b3829;
+}
