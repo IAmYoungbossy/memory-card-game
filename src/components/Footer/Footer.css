@@ -1,0 +1,20 @@
+i {
+  color: white;
+  font-size: 20px;
+}
+
+small {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  color: #eee;
+  padding: 10px;
+  margin-top: auto;
+  text-align: center;
+  background-color: #282c34;
+  border-top: 5px solid #45535afc;
+}

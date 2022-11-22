@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 body {
   background-color: #3e4451;
 }

@@ -5,20 +5,20 @@ header {
   padding-left: 40px;
   padding-right: 40px;
   align-items: center;
-  border-bottom: 2px solid;
   background-color: #282c34;
   justify-content: space-between;
   border-top: 1px solid #3e4451;
+  border-bottom: 5px solid #45535afc
 }
 
 header > p {
-  color: white;
+  color: #b3bcff;
   margin-left: 5px;
   font-size: 1.5rem;
 }
 
 h1 {
-  color: white;
+  color: #b3bcff;
   font-size: min(2rem, 13.5vw);
 }
 
