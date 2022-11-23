@@ -1,6 +1,9 @@
 .card-container {
-  width: min-content;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px auto;
+  flex-direction: row;
 }
 
 .card {
