@@ -1,22 +1,27 @@
 import { cardImage } from "../cardImage/cardImage";
 
-export const AddTransformEffect = (
-  newArr,
+export const AddTransformEffect = () => {
+  const cards = document.querySelectorAll(".card");
+  addOrRemoveCssClass(cards, "add");
+  return { cards };
+};
+
+export function setNewStates(
+  rearrangedCards,
   setImageData,
   best,
   score,
   setBest,
   setScore,
-  name
-) => {
-  const cards = document.querySelectorAll(".card");
-  addOrRemoveCssClass(cards, "add");
+  name,
+  cards
+) {
   setTimeout(() => {
     addOrRemoveCssClass(cards, "remove");
-    setImageData(newArr.flat());
+    setImageData(rearrangedCards.flat());
     resetGame(setImageData, best, score, setBest, setScore, name);
   }, 200);
-};
+}
 
 function addOrRemoveCssClass(cards, effectType) {
   if (effectType === "add")
