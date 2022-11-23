@@ -1,8 +1,13 @@
+import { AddTransformEffect } from "../cssTransition/cssTransition";
+
 export const rearrangeCards = (
   imageData,
-  AddTransformEffect,
   setImageData,
-  name
+  name,
+  best,
+  score,
+  setBest,
+  setScore
 ) => {
   const { imageDataCopy } = changeCardStatus(imageData, name);
   const newArr = [];
@@ -10,7 +15,15 @@ export const rearrangeCards = (
     const ranNum = Math.floor(Math.random() * imageDataCopy.length);
     newArr.push(imageDataCopy.splice(ranNum, 1));
   }
-  AddTransformEffect(newArr, setImageData);
+  AddTransformEffect(
+    newArr,
+    setImageData,
+    best,
+    score,
+    setBest,
+    setScore,
+    name
+  );
 };
 
 function changeCardStatus(imageData, name) {

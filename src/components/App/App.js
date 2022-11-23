@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import { cardImage } from "../cardImage/cardImage";
 import CardContainer, { Card } from "../Card/Card";
 import { rearrangeCards } from "../rearrangeCards/rearrangeCards";
-import { AddTransformEffect } from "../cssTransition/cssTransition";
 
 function App() {
   const [imageData, setImageData] = useState(cardImage);
@@ -13,10 +12,15 @@ function App() {
   const [best, setBest] = useState(0);
 
   const handlerMixCardRandomly = (name) => {
-    rearrangeCards(imageData, AddTransformEffect, setImageData, name);
-    setScore(score + 1);
-    setBest(best + 1);
-    if (name.status) setScore(0);
+    rearrangeCards(
+      imageData,
+      setImageData,
+      name,
+      best,
+      score,
+      setBest,
+      setScore
+    );
   };
 
   const cards = imageData.map((name) => (
