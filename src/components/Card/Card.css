@@ -21,6 +21,36 @@
   color: #ffffff;
   margin-top: auto;
   text-align: center;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   border-top: 1px solid #2b3829;
+}
+
+@keyframes append-card {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes remove-card {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.append-card {
+  animation: append-card 0.3s linear;
+}
+
+.remove-card {
+  animation: remove-card 0.4s linear;
 }

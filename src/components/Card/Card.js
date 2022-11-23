@@ -7,7 +7,7 @@ export default function CardContainer({ children }) {
 export function Card({ name, handleRearrangeCards }) {
   return (
     <div
-      className="card"
+      className="card append-card"
       onClick={handleRearrangeCards}
     >
       <div className="image-holder"></div>
