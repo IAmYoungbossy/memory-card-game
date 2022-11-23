@@ -10,6 +10,16 @@
   flex-direction: column;
 }
 
+.App > p:first-of-type {
+  color: white;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'FontAwesome';
+}
+
 body {
   background-color: #3e4451;
 }
