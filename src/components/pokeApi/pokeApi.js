@@ -44,8 +44,8 @@ function getSelectedIds() {
 function getIdRangeToPickFrom() {
   const { rangeStart } = chooseRandNum();
   const idRangeToPick = [];
-  const randeEnd = 20
-  for (let i = rangeStart; i < rangeStart + randeEnd; i++) {
+  const rangeEnd = 20
+  for (let i = rangeStart; i < rangeStart + rangeEnd; i++) {
     idRangeToPick.push(i);
   }
   return { idRangeToPick };

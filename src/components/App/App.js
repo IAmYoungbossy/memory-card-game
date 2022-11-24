@@ -22,7 +22,18 @@ function App() {
     const { rearrangedCards } = rearrangeCards(imageData, name);
     const { cards } = AddTransformEffect();
     removeCssClassAndSetImageData(rearrangedCards, setImageData, cards);
-    resetGame(setImageData, best, score, setBest, setScore, name, imageData);
+    resetGame(
+      name,
+      best,
+      score,
+      setImg,
+      setBest,
+      setScore,
+      imageData,
+      setIsLoaded,
+      setImageData,
+      getAllCardsAttributes
+    );
   };
 
   const cards = imageData.map((img) => (
