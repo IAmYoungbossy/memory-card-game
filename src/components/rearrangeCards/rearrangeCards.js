@@ -1,7 +1,8 @@
 export const rearrangeCards = (imageData, name) => {
   const { imageDataCopy } = changeCardStatus(imageData, name);
+  const arrayLength = imageDataCopy.length;
   const rearrangedCards = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < arrayLength; i++) {
     const ranNum = Math.floor(Math.random() * imageDataCopy.length);
     rearrangedCards.push(imageDataCopy.splice(ranNum, 1));
   }
