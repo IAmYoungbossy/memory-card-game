@@ -1,7 +1,7 @@
 import { Pokedex } from "pokeapi-js-wrapper";
 
 const P = new Pokedex();
-const level = 10;
+const level = 5;
 
 export default async function getAllCardsAttributes(
   setImg,

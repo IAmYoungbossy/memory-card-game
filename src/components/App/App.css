@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-.App > p:first-of-type {
+.App > p {
   color: white;
   margin-top: 20px;
   font-weight: 300;

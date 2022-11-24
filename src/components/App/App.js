@@ -17,6 +17,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [imageData, setImageData] = useState(img);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [gameLevel, setGameLevel] = useState(1);
 
   const handlerMixCardRandomly = (name) => {
     const { rearrangedCards } = rearrangeCards(imageData, name);
@@ -49,12 +50,24 @@ function App() {
     getAllCardsAttributes(setImg, setIsLoaded, setImageData);
   }, []);
 
+  useEffect(() => {
+    const cards = imageData.flat();
+    let allSelected = cards.every((card) => card.status === true);
+    if (allSelected) {
+      setIsLoaded(false);
+      // setGameLevel(gameLevel + 1);
+      getAllCardsAttributes(setImg, setIsLoaded, setImageData);
+    }
+    allSelected = false;
+  }, [imageData, gameLevel]);
+
   return (
     <div className="App">
       <Header
         score={score}
         best={best}
       />
+      <p>Game level: {gameLevel}</p>
       <p>Select each card only once to test your memory</p>
       {isLoaded && <CardContainer>{cards}</CardContainer>}
       <Footer />
