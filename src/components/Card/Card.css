@@ -12,17 +12,30 @@
   display: flex;
   border-radius: 10px;
   flex-direction: column;
-  border: 3px solid #45535afc;
-  background-color: #2a28346b;
 }
 
 .name-holder {
   padding: 5px;
-  color: #ffffff;
+  color: #f4ffc8;
   margin-top: auto;
   text-align: center;
-  font-family: "FontAwesome";
-  border-top: 1px solid #45535afc;
+  border-radius: 10px;
+  font-family: monospace;
+  border: 3px solid #282c34;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #48525ed6;
+  border-top: 3px solid #353744;
+}
+
+.image-holder {
+  flex: 1 1;
+  margin-bottom: 2px;
+  border: 3px solid #282c34;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #45535afc;
 }
 
 @keyframes append-card {
