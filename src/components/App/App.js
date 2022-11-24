@@ -1,15 +1,15 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import CardContainer, { Card } from "../Card/Card";
-import { rearrangeCards } from "../rearrangeCards/rearrangeCards";
 import {
   AddTransformEffect,
   removeCssClassAndSetImageData,
 } from "../cssTransition/cssTransition";
-import { Pokedex } from "pokeapi-js-wrapper";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import { useEffect, useState } from "react";
 import resetGame from "../resetGame/resetGame";
+import CardContainer, { Card } from "../Card/Card";
+import getAllCardsAttributes from "../pokeApi/pokeApi";
+import { rearrangeCards } from "../rearrangeCards/rearrangeCards";
 
 function App() {
   const [img, setImg] = useState([]);
@@ -35,25 +35,7 @@ function App() {
   ));
 
   useEffect(() => {
-    const P = new Pokedex();
-    const newArr = [];
-    Promise.all([
-      P.getPokemonByName(1),
-      P.getPokemonByName(2),
-      P.getPokemonByName(3),
-      P.getPokemonByName(4),
-    ]).then((resolve) => {
-      resolve.forEach((img) => {
-        newArr.push({
-          status: false,
-          name: img.name,
-          src: img.sprites.other.dream_world.front_default,
-        });
-      });
-      setImg(newArr);
-      setIsLoaded(true);
-      setImageData(newArr);
-    });
+    getAllCardsAttributes(setImg, setIsLoaded, setImageData);
   }, []);
 
   return (
