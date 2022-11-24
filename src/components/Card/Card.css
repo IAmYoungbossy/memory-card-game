@@ -12,8 +12,8 @@
   display: flex;
   border-radius: 10px;
   flex-direction: column;
-  border: 3px solid #2b3829;
-  background-color: #40513e;
+  border: 3px solid #45535afc;
+  background-color: #2a28346b;
 }
 
 .name-holder {
@@ -22,7 +22,7 @@
   margin-top: auto;
   text-align: center;
   font-family: "FontAwesome";
-  border-top: 1px solid #2b3829;
+  border-top: 1px solid #45535afc;
 }
 
 @keyframes append-card {
