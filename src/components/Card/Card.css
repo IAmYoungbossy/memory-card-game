@@ -30,12 +30,20 @@
 
 .image-holder {
   flex: 1 1;
+  display: flex;
   margin-bottom: 2px;
+  justify-content: center;
+  align-items: center;
   border: 3px solid #282c34;
   border-bottom: none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: #45535afc;
+}
+
+.image-holder > img {
+  width: 120px;
+  height: 120px;
 }
 
 @keyframes append-card {
