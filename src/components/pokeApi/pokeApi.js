@@ -1,6 +1,10 @@
 import { Pokedex } from "pokeapi-js-wrapper";
 
-const P = new Pokedex();
+const customOptions = {
+  timeout: 150 * 1000,
+}
+
+const P = new Pokedex(customOptions);
 
 export default async function getAllCardsAttributes(
   setImg,
