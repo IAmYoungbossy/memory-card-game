@@ -1,15 +1,15 @@
 import { Pokedex } from "pokeapi-js-wrapper";
 
 const P = new Pokedex();
-const level = 5;
 
 export default async function getAllCardsAttributes(
   setImg,
   setIsLoaded,
-  setImageData
+  setImageData,
+  cardNum
 ) {
   const newArr = [];
-  const { cards } = fetchCardDetals();
+  const { cards } = fetchCardDetals(cardNum);
   const fetchedCards = await Promise.all(cards);
   const pushCardDetails = (img) => {
     newArr.push({
@@ -20,21 +20,21 @@ export default async function getAllCardsAttributes(
   };
   fetchedCards.forEach(pushCardDetails);
   setImg(newArr);
-  setIsLoaded(true);
   setImageData(newArr);
+  setIsLoaded(true);
 }
 
-function fetchCardDetals() {
-  const { idToDisplay } = getSelectedIds();
+function fetchCardDetals(cardNum) {
+  const { idToDisplay } = getSelectedIds(cardNum);
   const CardIDs = idToDisplay.flat();
   const cards = CardIDs.map((id) => P.getPokemonByName(id));
   return { cards };
 }
 
-function getSelectedIds() {
+function getSelectedIds(cardNum) {
   const { idRangeToPick } = getIdRangeToPickFrom();
   const idToDisplay = [];
-  for (let i = 0; i < level; i++) {
+  for (let i = 0; i < cardNum; i++) {
     const ranNum = Math.floor(Math.random() * idRangeToPick.length);
     idToDisplay.push(idRangeToPick.splice(ranNum, 1));
   }

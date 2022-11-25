@@ -15,9 +15,10 @@ function App() {
   const [img, setImg] = useState([]);
   const [best, setBest] = useState(0);
   const [score, setScore] = useState(0);
+  const [cardNum, setCardNum] = useState(4);
+  const [gameLevel, setGameLevel] = useState(1);
   const [imageData, setImageData] = useState(img);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [gameLevel, setGameLevel] = useState(1);
 
   const handlerMixCardRandomly = (name) => {
     const { rearrangedCards } = rearrangeCards(imageData, name);
@@ -28,11 +29,14 @@ function App() {
       best,
       score,
       setImg,
+      cardNum,
       setBest,
       setScore,
       imageData,
+      setCardNum,
       setIsLoaded,
       setImageData,
+      setGameLevel,
       getAllCardsAttributes
     );
   };
@@ -47,19 +51,18 @@ function App() {
   ));
 
   useEffect(() => {
-    getAllCardsAttributes(setImg, setIsLoaded, setImageData);
-  }, []);
+    const cards = imageData.flat();
+    const allSelected = cards.every((card) => card.status === true);
+    if (allSelected && cards.length > 0) {
+      setIsLoaded(false);
+      setCardNum((c) => c + 2);
+      setGameLevel((c) => c + 1);
+    }
+  }, [imageData]);
 
   useEffect(() => {
-    const cards = imageData.flat();
-    let allSelected = cards.every((card) => card.status === true);
-    if (allSelected) {
-      setIsLoaded(false);
-      // setGameLevel(gameLevel + 1);
-      getAllCardsAttributes(setImg, setIsLoaded, setImageData);
-    }
-    allSelected = false;
-  }, [imageData, gameLevel]);
+    getAllCardsAttributes(setImg, setIsLoaded, setImageData, cardNum);
+  }, [cardNum]);
 
   return (
     <div className="App">

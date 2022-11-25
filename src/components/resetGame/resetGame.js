@@ -3,11 +3,14 @@ export default function resetGame(
   best,
   score,
   setImg,
+  cardNum,
   setBest,
   setScore,
   imageData,
+  setCardNum,
   setIsLoaded,
   setImageData,
+  setGameLevel,
   getAllCardsAttributes
 ) {
   setScore(score + 1);
@@ -17,6 +20,8 @@ export default function resetGame(
     setBest(best);
     setImageData(imageData);
     setIsLoaded(false);
-    getAllCardsAttributes(setImg, setIsLoaded, setImageData);
+    setGameLevel(1);
+    setCardNum(4)
+    getAllCardsAttributes(setImg, setIsLoaded, setImageData, cardNum);
   }
 }
