@@ -1,4 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 header {
+  gap: 10px;
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
@@ -14,12 +17,16 @@ header {
 header > p {
   color: #b3bcff;
   margin-left: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Pokemon Solid', sans-serif;
 }
 
 h1 {
-  color: #b3bcff;
+  color: #2a0088c4;
+  letter-spacing: 4px;
   font-size: min(2rem, 13.5vw);
+  text-shadow: 3px -2px 2px yellowgreen;
+  font-family: 'Pokemon Solid', sans-serif;
 }
 
 .current-score,
@@ -32,16 +39,21 @@ h1 {
 
 .current-score {
   color: #bcff98;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .highest-score {
   color: #f89898;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   header {
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
+    flex-direction: column;
   }
 }

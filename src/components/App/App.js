@@ -67,7 +67,7 @@ function App() {
         score={score}
         best={best}
       />
-      <p>Game level: {gameLevel}</p>
+      <p>Level: {gameLevel}</p>
       <p>Select each card only once to test your memory</p>
       {isLoaded && <CardContainer>{cards}</CardContainer>}
       <Footer />
