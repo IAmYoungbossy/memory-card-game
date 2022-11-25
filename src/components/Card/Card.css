@@ -2,13 +2,15 @@
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
+  padding: 0 20px;
   margin: 20px auto;
   flex-direction: row;
+  justify-content: center;
 }
 
 .card {
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 170px;
   display: flex;
   border-radius: 10px;
   flex-direction: column;
