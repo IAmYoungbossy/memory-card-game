@@ -20,6 +20,42 @@
   font-family: "Pokemon Solid", sans-serif;
 }
 
+.gameOver > h1 {
+  color: white;
+  letter-spacing: normal;
+  font-size: 3.5rem;
+  text-shadow: none;
+  font-family: initial;
+}
+
+.gameOver > p {
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 900;
+}
+
+.gameOver > button {
+  padding: 5px;
+  background-color: #3e4451;
+  color: white;
+  font-weight: 900;
+  border: 1px solid;
+}
+
+.gameOver {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35vh;
+}
+
+.gameOver {
+  transition: all .2s ease-in-out;
+}
+
 body {
   background-color: #353744;
 }
