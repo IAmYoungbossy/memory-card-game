@@ -10,6 +10,7 @@ import resetGame from "../resetGame/resetGame";
 import CardContainer, { Card } from "../Card/Card";
 import getAllCardsAttributes from "../pokeApi/pokeApi";
 import { rearrangeCards } from "../rearrangeCards/rearrangeCards";
+import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 function App() {
   const [img, setImg] = useState([]);
@@ -63,12 +64,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        score={score}
-        best={best}
-      />
-      <p>Level: {gameLevel}</p>
+      <div className="header-container">
+        <Header
+          score={score}
+          best={best}
+        />
+        <p>Level: {gameLevel}</p>
+      </div>
       <p>Select each card only once to test your memory</p>
+      {isLoaded === false && <LoadingScreen />}
       {isLoaded && <CardContainer>{cards}</CardContainer>}
       <Footer />
     </div>

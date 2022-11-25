@@ -9,9 +9,30 @@ header {
   padding-right: 40px;
   align-items: center;
   background-color: #20232a;
+  width: -webkit-fill-available;
   justify-content: space-between;
   border-top: 1px solid #3e4451;
   border-bottom: 5px solid #45535afc
+}
+
+.header-container {
+  position: fixed;
+  width: -webkit-fill-available;
+}
+
+.header-container > p {
+  margin: 0px auto;
+  font-size: 0.9rem;
+  padding: 1px 10px;
+  font-weight: bold;
+  width: fit-content;
+  margin-bottom: 5px;
+  color: darkseagreen;
+  font-family: monospace;
+  background-color: #20232a;
+  text-shadow: 0px 0px 0px #080808;
+  box-shadow: 0px 1px 2px 3px #45535afc;
+  font-family: "Pokemon Solid", sans-serif;
 }
 
 header > p {
@@ -55,5 +76,8 @@ h1 {
     padding-right: 20px;
     justify-content: center;
     flex-direction: column;
+  }
+  .App > p {
+    margin-top: 170px;
   }
 }

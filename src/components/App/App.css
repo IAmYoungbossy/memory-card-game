@@ -12,8 +12,7 @@
 
 .App > p {
   color: white;
-  margin-top: 8px;
-  margin-top: 20px;
+  margin-top: 135px;
   font-weight: 300;
   font-size: 0.95rem;
   text-align: center;
@@ -21,8 +20,8 @@
   font-family: "Pokemon Solid", sans-serif;
 }
 
-.App > p:first-of-type {
-  margin: 0 auto;
+/* .App > p:first-of-type {
+  margin: 92px auto;
   font-size: 0.9rem;
   padding: 1px 10px;
   font-weight: bold;
@@ -34,7 +33,7 @@
   text-shadow: 0px 0px 0px #080808;
   box-shadow: 0px 1px 2px 3px #45535afc;
   font-family: "Pokemon Solid", sans-serif;
-}
+} */
 
 body {
   background-color: #353744;

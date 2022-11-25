@@ -21,7 +21,7 @@ export default async function getAllCardsAttributes(
   fetchedCards.forEach(pushCardDetails);
   setImg(newArr);
   setImageData(newArr);
-  setIsLoaded(true);
+  setTimeout(() => setIsLoaded(true), 1300);
 }
 
 function fetchCardDetals(cardNum) {
@@ -44,7 +44,7 @@ function getSelectedIds(cardNum) {
 function getIdRangeToPickFrom() {
   const { rangeStart } = chooseRandNum();
   const idRangeToPick = [];
-  const rangeEnd = 20
+  const rangeEnd = 20;
   for (let i = rangeStart; i < rangeStart + rangeEnd; i++) {
     idRangeToPick.push(i);
   }
