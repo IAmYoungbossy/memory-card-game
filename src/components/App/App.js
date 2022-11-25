@@ -28,16 +28,13 @@ function App() {
       name,
       best,
       score,
-      setImg,
-      cardNum,
       setBest,
       setScore,
       imageData,
       setCardNum,
       setIsLoaded,
       setImageData,
-      setGameLevel,
-      getAllCardsAttributes
+      setGameLevel
     );
   };
 
