@@ -43,10 +43,10 @@ header > p {
 }
 
 h1 {
-  color: #2a0088c4;
+  color: #b6ca4af2;
   letter-spacing: 4px;
   font-size: min(2rem, 13.5vw);
-  text-shadow: 3px -2px 2px yellowgreen;
+  text-shadow: 3px -2px 2px #0224dde6;
   font-family: 'Pokemon Solid', sans-serif;
 }
 
