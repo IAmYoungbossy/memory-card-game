@@ -16,6 +16,7 @@ header {
 }
 
 .header-container {
+  line-height: 1;
   position: fixed;
   width: -webkit-fill-available;
 }
@@ -33,6 +34,11 @@ header {
   text-shadow: 0px 0px 0px #080808;
   box-shadow: 0px 1px 2px 3px #45535afc;
   font-family: "Pokemon Solid", sans-serif;
+}
+
+.header-container >p:last-of-type {
+  line-height: 1;
+  font-family: sans-serif;
 }
 
 header > p {
@@ -78,6 +84,6 @@ h1 {
     flex-direction: column;
   }
   .App > p {
-    margin-top: 160px;
+    margin-top: 170px;
   }
 }
